@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Manager</title>
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+	
+
+
+	<div class="contact-type-view">
+		<ul class="contact-type-list">
+
+		</ul>
+	</div>
+	<div class="contact-main-area">
+		<table class="contact-list">
+
+		</table>
+	</div>
+
+
+	
+	<script type="text/template" id="contact-type-template">
+		<li><a href="#"><%= type %></a></li>
+	</script>
+	<script type="text/template" id="contact-list-template">
+		
+		<td class="contact-name"><%= name %></td>
+		<td class="contact-email"><%= email %></td>
+		<td class="contact-mobile"><%= mobile %></td>
+		
+	</script>
+
+	<script type="text/javascript" src="jquery-1.7.2.js" ></script>
+	<script type="text/javascript" src="underscore.js" ></script>
+	<script type="text/javascript" src="backbone.js" ></script>
+	<script type="text/javascript" src="contact-main.js" ></script>
+</body>
+</html>

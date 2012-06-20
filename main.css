@@ -1,0 +1,34 @@
+div,li,ul,a,span{
+	margin: 0;
+	padding: 0;
+}
+.contact-type-view{
+	float: left;
+	height:400px;
+	width:15%;
+	background-color: gray;
+}
+.contact-main-area{
+	float: left;
+	height:400px;
+	width:85%;
+	background-color: #E6E5E1;
+}
+
+
+.contact-type-list li{
+	list-style-type: none;
+}
+.contact-list li{
+	list-style-type: none;
+	
+}
+.contact-list li a{
+	text-decoration: none;
+}
+.contact-name,.contact-email,.contact-mobile{
+	
+}
+.contact-name{width:50%;}
+.contact-email{width:30%;}
+.contact-mobile{}
