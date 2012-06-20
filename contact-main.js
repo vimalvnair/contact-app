@@ -49,6 +49,7 @@
 
 	ContactView = Backbone.View.extend({
 		tagName: "tr",
+		
 		template: _.template($("#contact-list-template").html()),
 		render: function(){
 			this.$el.html(this.template(this.model.toJSON()));

@@ -16,14 +16,17 @@ div,li,ul,a,span{
 }
 
 
+.contact-list{
+	margin: 10px;
+}
 .contact-type-list li{
 	list-style-type: none;
 }
-.contact-list li{
-	list-style-type: none;
+.contact-list td {
+	border: 1px solid black;
 	
 }
-.contact-list li a{
+.contact-list  a{
 	text-decoration: none;
 }
 .contact-name,.contact-email,.contact-mobile{
