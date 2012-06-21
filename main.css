@@ -1,37 +1,70 @@
-div,li,ul,a,span{
+div,li,ul,a,span,tr,td,th,table{
 	margin: 0;
 	padding: 0;
 }
 .contact-type-view{
 	float: left;
 	height:400px;
-	width:15%;
+	width:13%;
 	background-color: gray;
 }
 .contact-main-area{
 	float: left;
 	height:400px;
-	width:85%;
-	background-color: #E6E5E1;
+	width:82%;
+	
 }
-
-
+.contact-form-container input{
+	display: block;
+	width: 600px;
+	height:20px;
+	margin: 5px 0px;
+}
+.contact-form-container{
+	margin:40px ;
+}
+.new-contact{
+	margin: 20px auto;
+	width:100px;
+}
 .contact-list{
 	margin: 10px;
+	
+}
+.contact-type-list{
+	padding: 20px 0px;
+	font-weight: bold;
+
 }
 .contact-type-list li{
 	list-style-type: none;
+	text-align: center;
+	padding: 1px;
 }
-.contact-list td {
-	border: 1px solid black;
-	
+.contact-type-list li a{
+	text-decoration: none;
+	color: black;
 }
-.contact-list  a{
+.contact-type-list li a:hover{
+	text-decoration: underline;
+}
+.contact-list{
+	padding: 20px;	
+}
+.contact-list td {	
+	border-bottom: 1px solid #DDDDDD;
+	padding: 5px 0;
+}
+.contact-list th{
+	text-align: left;
+	padding: 5px 0;
+}
+.contact-list a{
 	text-decoration: none;
 }
 .contact-name,.contact-email,.contact-mobile{
 	
 }
-.contact-name{width:50%;}
-.contact-email{width:30%;}
-.contact-mobile{}
+.contact-name{width:500px;}
+.contact-email{width:200px;}
+.contact-mobile{width:400px;}

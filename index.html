@@ -13,27 +13,47 @@
 
 
 	<div class="contact-type-view">
+		<div class="new-contact"><button id="new-contact-button">New Contact</button></div>
 		<ul class="contact-type-list">
+			<li><a href="#type/all">all</a></li>
 
 		</ul>
 	</div>
 	<div class="contact-main-area">
 		<table class="contact-list">
-
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Mobile</th>
+			</tr>
 		</table>
 	</div>
 
 
 	
 	<script type="text/template" id="contact-type-template">
-		<li><a href="#"><%= type %></a></li>
+	
+		<li><a href="#type/<%= type %>"><%= type %></a></li>
+	
 	</script>
+	
 	<script type="text/template" id="contact-list-template">
 		
 		<td class="contact-name"><%= name %></td>
 		<td class="contact-email"><%= email %></td>
 		<td class="contact-mobile"><%= mobile %></td>
 		
+	</script>
+
+	<script type="text/template" id="contact-form-template">
+		<form id="contact-form" action="#">
+		<lable for="name">Name:</lable><input type="text" id="name"></input>
+		<lable for="email">Email:</lable><input type="text" id="email"></input>
+		<lable for="mobile">Mobile:</lable><input type="text" id="mobile"></input>
+		<lable for="address">Address:</lable><input type="text" id="address"></input>
+		<lable for="type">Type:</lable><input type="text" id="type"></input>
+		<button id="add-contact">Add</button>
+		</form>
 	</script>
 
 	<script type="text/javascript" src="jquery-1.7.2.js" ></script>
