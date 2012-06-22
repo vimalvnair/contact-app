@@ -74,6 +74,7 @@
 			
 		},
 		render: function(){
+			$(".contact-form-container").remove();
 			this.$el.html(this.template());
 			return this;
 
@@ -82,6 +83,7 @@
 
 	ContactsMainView = Backbone.View.extend({
 		el: $(".contact-main-area"),
+		contactTableTemplate: _.template($("#contact-table-template").html()),
 
 		initialize: function(){
 			this.collection = new ContactCollection(contacts);
@@ -93,21 +95,19 @@
 
 		},
 		render: function(){
-
-			this.$el.find("tr:has(td)").remove();
+			this.$el.children().remove();
+			this.$el.append(this.contactTableTemplate());
+			
 			_.each(this.collection.models,function(item){
 				var cv = new ContactView({model: item});
-				if(this.$el.find(".contact-list").length == 0){
-					//this.$el.append()
-				}
 				this.$el.find(".contact-list").append(cv.render().el);
 			},this)
 		},
 		renderForm: function(){
-			this.$el.find(".contact-list").remove();
+			this.$el.children().remove();
 			var contactForm = new ContactFormView();
 			this.$el.append(contactForm.render().el);
-			
+			contactsRouter.navigate("form");
 
 			//console.log(contactForm.render().el);
 
@@ -115,6 +115,7 @@
 		filterByType: function(){
 			console.log("navigated to "+this.filterType);
 			if(this.filterType == "all"){
+				console.log("calling all contacts............")
 				this.collection.reset(contacts);	
 			}
 			else{
